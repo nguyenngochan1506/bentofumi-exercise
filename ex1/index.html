@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-content">
+            <form action="#" class="form-input">
+            <h1 class="title">Create an account</h1>
+                <div class="input-group">
+                    <div class="input-item">
+                        <label for="full-name">Full Name</label>
+                        <input  type="text" name="full-name" id="full-name">
+                    </div>
+                    <div class="input-item">
+                        <label for="email">Email</label>
+                        <input placeholder="example.email@gmail.com" type="email" name="email" id="email">
+                    </div>
+                    <div class="input-item">
+                        <label for="password">Password</label>
+                        <input placeholder="Enter at least 8+ characters " type="password" name="password" id="password">
+                        <span class="icon-toggle" id="togglePassword">
+                            <img src="./img/phosphor-EyeSlash-Outlined.svg" alt="icon-toggle">
+                        </span>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Sign in</button>
+                <div class="other-link">
+                    <p>Or sign in with</p>
+                    <div class="logo-group">
+                        <div class="logo-group-item button">
+                            <img src="./img/phosphor-Google-Outlined.svg" alt="logo">
+                        </div>
+                        <div class="logo-group-item button">
+                            <img src="./img/phosphor-Facebook-Outlined.svg" alt="logo">
+                        </div>
+                        <div class="logo-group-item button">
+                            <img src="./img/phosphor-Apple-Outlined.svg" alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="right-content">
+            <img src="./img/banner.svg" alt="logo">
+        </div>
+    </div>
+    <script>
+        const passwordInput = document.getElementById('password');
+        const togglePassword = document.querySelector('#togglePassword img')
+
+        togglePassword.addEventListener('click', () =>{
+            const type = passwordInput.type === 'password' ? 'text' : 'password'
+            
+            passwordInput.type = type;
+            if(type === 'password'){
+                togglePassword.setAttribute('src', './img/phosphor-EyeSlash-Outlined.svg')
+            }else{
+                togglePassword.setAttribute('src', './img/phosphor-Eye-Outlined.svg')
+            }
+        })
+    </script>
+</body>
+</html>
