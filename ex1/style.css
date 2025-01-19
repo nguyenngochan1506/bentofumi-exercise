@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -70,10 +71,10 @@ body{
   font-size: 14px; 
   line-height: 22px; 
   font-weight: 400; 
-  background: #C8F9FFFF; /* primary-150 */
+   background: #F3F4F6; 
   border-radius: 4px; /* border-m */
   border-width: 0px; 
-  outline: none; 
+  outline:none 
 }
 .input-item{
 margin-bottom: 24px;
@@ -176,12 +177,14 @@ position: relative;
 
   .input-item input:hover{
     color: #00BDD6FF; /* primary-500 */
-  background: #C8F9FFFF; 
   outline: auto;
+  background: #C8F9FFFF; 
   }
-  .input-item input:focused {
+  .input-item input:focus {
     color: #BCC1CAFF; /* neutral-400 */
-    background: #FFFFFFFF; /* white */
+    background: #C8F9FFFF; 
+    color: #00BDD6FF;
+    outline: auto;
   }
   /* disabled */
   .input-item input:disabled {
